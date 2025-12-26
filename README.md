@@ -1,4 +1,4 @@
-📌 USB Pendrive Monitor Driver (Linux)  
+USB Pendrive Monitor Driver (Linux)  
 🔹 Project Overview
 
 This project implements a safe hybrid Linux device driver that monitors USB pendrive connection and disconnection events.
@@ -33,7 +33,7 @@ git clone https://github.com/Ameya32/Usb-pendrive-monitor-driver.git
 5️⃣ Read driver output
 `sudo cat /dev/usb_pendrive`
 
-6️⃣ Check kernel logs (optional)
+6️⃣ Check kernel logs
 `dmesg | tail`
 
 7️⃣ Remove the driver
