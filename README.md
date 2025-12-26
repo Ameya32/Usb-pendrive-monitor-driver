@@ -20,23 +20,23 @@ User-space access via standard file operations (cat)
 `sudo apt update`  
 `sudo apt install build-essential linux-headers-$(uname -r) git`
 
-2️ Clone the repository  
+ 2.Clone the repository  
 git clone https://github.com/Ameya32/Usb-pendrive-monitor-driver.git  
 `cd Usb-pendrive-monitor-driver`
 
-3️Build the kernel module  
+ 3.Build the kernel module  
 `make`
 
-4️Insert the driver  
+ 4.Insert the driver  
 `sudo insmod usb_pendrive_enhanced.ko`
 
-5️Read driver output  
+ 5.Read driver output  
 `sudo cat /dev/usb_pendrive`
 
-6️Check kernel logs  
+ 6.Check kernel logs  
 `dmesg | tail`
 
-7️Remove the driver  
+ 7.Remove the driver  
 `sudo rmmod usb_pendrive_enhanced`
 
 Author
