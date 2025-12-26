@@ -16,27 +16,27 @@ Maintains connection count
 User-space access via standard file operations (cat)
 
 ⚙️ Build & Run Instructions
-1️⃣ Install required tools
+1️⃣ Install required tools  
 `sudo apt update`  
 `sudo apt install build-essential linux-headers-$(uname -r) git`
 
-2️⃣ Clone the repository
-git clone https://github.com/Ameya32/Usb-pendrive-monitor-driver.git 
+2️⃣ Clone the repository  
+git clone https://github.com/Ameya32/Usb-pendrive-monitor-driver.git  
 `cd Usb-pendrive-monitor-driver`
 
-3️⃣ Build the kernel module
+3️⃣ Build the kernel module  
 `make`
 
-4️⃣ Insert the driver
+4️⃣ Insert the driver  
 `sudo insmod usb_pendrive_enhanced.ko`
 
-5️⃣ Read driver output
+5️⃣ Read driver output  
 `sudo cat /dev/usb_pendrive`
 
-6️⃣ Check kernel logs
+6️⃣ Check kernel logs  
 `dmesg | tail`
 
-7️⃣ Remove the driver
+7️⃣ Remove the driver  
 `sudo rmmod usb_pendrive_enhanced`
 
 Author
