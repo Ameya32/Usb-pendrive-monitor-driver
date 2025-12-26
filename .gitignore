@@ -1,0 +1,19 @@
+# Kernel build artifacts
+*.o
+*.ko
+*.mod
+*.mod.c
+*.symvers
+*.order
+.*.cmd
+
+# Kernel temp directories
+.tmp_versions/
+
+# Editor files
+*~
+*.swp
+*.swo
+
+# Logs
+*.log
