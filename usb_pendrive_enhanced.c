@@ -7,18 +7,13 @@
 #include <linux/uaccess.h>
 #include <linux/notifier.h>
 
-/* =========================
-   Target Pendrive
-   ========================= */
 #define TARGET_VENDOR_ID  0x03f0   // HP
 #define TARGET_PRODUCT_ID 0x1985   // HP Flash Drive
 
 #define DEVICE_NAME "usb_pendrive"
 #define CLASS_NAME  "usbdrv"
 
-/* =========================
-   Globals
-   ========================= */
+
 static int major;
 static struct class *usb_class;
 static struct cdev usb_cdev;
@@ -28,9 +23,7 @@ static int connection_count;
 static u16 vendor_id;
 static u16 product_id;
 
-/* =========================
-   Character Driver (FOPS)
-   ========================= */
+//Fops
 static int usb_open(struct inode *inode, struct file *file)
 {
     pr_info("usbdrv: device opened\n");
@@ -80,10 +73,7 @@ static struct file_operations fops = {
     .read    = usb_read,
     .release = usb_release,
 };
-
-/* =========================
-   USB NOTIFIER (SAFE)
-   ========================= */
+//Usb  notifier
 static int usb_event(struct notifier_block *nb,
                      unsigned long action,
                      void *data)
@@ -119,9 +109,6 @@ static struct notifier_block usb_nb = {
     .notifier_call = usb_event,
 };
 
-/* =========================
-   INIT / EXIT
-   ========================= */
 static int __init usb_init(void)
 {
     dev_t dev;
